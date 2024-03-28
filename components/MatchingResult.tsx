@@ -24,7 +24,7 @@ const MatchingResult = () => {
     
 
     return (
-        <div className="w-full h-96 flex flex-col justify-center items-center gap-4 text-white text-8xl font-semibold">
+        <div className="w-full h-96 flex flex-col justify-center items-center gap-4 text-white md:text-8xl text-5xl font-semibold">
             { firstName && (
                 <h3 className="flex items-center">
                     { firstSymbol && (<SymbolSquare symbol={firstSymbol} />)}
@@ -42,6 +42,6 @@ const MatchingResult = () => {
 }
 
 const SymbolSquare = ({ symbol }: SymbolSquareProps) => (
-    <span className="min-w-24 flex justify-center bg-primary py-2.5 px-1.5">{symbol}</span>)
+    <span className="md:min-w-24 min-w-8 flex justify-center bg-primary py-2.5 px-1.5">{symbol}</span>)
 
 export default MatchingResult;

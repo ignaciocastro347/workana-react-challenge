@@ -28,22 +28,22 @@ const Home = () => {
     <main className={`w-full max-w-screen-sm p-4 ${inter.className}`}>
       <MatchingResult />
       
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <div className="w-full flex flex-row gap-6 px-2 mb-2">
-        <LabeledTextfield
-          autoFocus
-          label="First Name"
-          value={firstName}
-          handleChange={(value) => setFirstName(value)}
-        />
-        <LabeledTextfield
-          label="Last Name"
-          value={lastName}
-          handleChange={(value) => setLastName(value)}
-        />
-      </div>
+      <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
+        <div className="w-full flex xs:flex-row flex-col gap-6 px-2 mb-2">
+          <LabeledTextfield
+            autoFocus
+            label="First Name"
+            value={firstName}
+            handleChange={(value) => setFirstName(value)}
+          />
+          <LabeledTextfield
+            label="Last Name"
+            value={lastName}
+            handleChange={(value) => setLastName(value)}
+          />
+        </div>
 
-      <Button type="submit" label="Breakify"/>
+        <Button type="submit" label="Breakify"/>
       </form>
     </main>
   );

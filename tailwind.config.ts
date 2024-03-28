@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "xs": "375px",
+      },
       colors: {
         darkBg: "#212121",
         primary: "#0A4830",
