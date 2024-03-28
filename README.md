@@ -1,4 +1,59 @@
-# DO NOT PULL TO THIS REPOSITORY
+# Workana React Challenge
+
+## Quick Start
+
+### Running Locally
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Using Docker
+
+1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
+2. Clone this Repository.
+3. Build your container: `docker-compose build`
+4. Run your container: `docker-compose up`
+
+> [!WARNING]
+> At the moment the repo has an issue which could not be fixed! Let's explain this below:
+
+This repo uses Docker and GitHub Pages. The thing is that both could not work properly at the same time for now, I'll be looking for a solution until then.
+
+### How to make Docker work!
+
+Make sure that `next.config.mjs` file exists instead of `next.config.js` containing this content:
+
+```
+const nextConfig = {
+  reactStrictMode: false,
+};
+
+export default nextConfig;
+```
+### How to make GitHub Pages work!
+
+Make sure that `next.config.js` file exists instead of `next.config.mjs` containing this content:
+
+```
+const nextConfig = {
+  reactStrictMode: false,
+  output: "export",
+};
+
+module.exports = nextConfig;
+```
+
+
+# About this Challenge
+
+### DO NOT PULL TO THIS REPOSITORY
 ### react-challenge
 
 1. Create a fork of this public repository https://github.com/sebasworkana/react-challenge.git on your own repository, and push it to a branch called react-challenge and then send a PR to your main branch, finally give us access to this github user sebasworkana.
